@@ -12,3 +12,6 @@ npm install
 # serve all project with livereload
 npm start
 
+# Compile only styles
+npm run styles
+

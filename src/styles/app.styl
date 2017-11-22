@@ -1,0 +1,126 @@
+@import './base.styl'
+@import './colors.styl'
+// @import './animate.styl'
+
+@import './utils.styl'
+@import './media.styl'
+
+
+
+body
+  margin 0
+  padding 0
+  background grisclaro
+  
+.main-content
+  padding-top 30px
+.tabs
+  margin 0
+  .tabs-item
+    padding .4em .8em
+    margin .3em .6em
+    border-radius 4px
+    background trasparent
+    transition .4s
+  .tabs-item-active
+    background rgba(0, 0, 0, .1)
+
+.app-header
+  border-bottom 2px solid #ccc
+  padding 0px 30px
+  background darkblue
+  position fixed
+  z-index 10000
+  width 100%
+  .logo
+    width 100px
+    margin 0
+    img
+      width 100%
+      height 100%
+
+
+.my-nav
+  width 27%
+  transition .4s
+  border-right 3px solid lightgray
+  &-list
+    list-style none
+    padding 10px 15px
+    &-item
+      border-bottom 1px solid lightgray
+      color #0a3e62
+      &:last-child
+        border-bottom 0px
+      &-icon
+        margin-right 10px
+      .my-badge
+        position relative
+        top 7px
+      .router-link-active
+        color fuchia !important
+      a
+        color gray !important
+        font-size 1.3em
+        padding 15px 3px
+        display block
+        transition .5s
+        &:hover
+          padding-left 10px
+          color #D21341 !important
+        
+input[type="checkbox"].check
+ &:not(:checked), &:checked
+   position absolute
+   left -9999px
+ &:not(:checked) + label, &:checked + label
+   position relative
+   padding-left 1.95em
+   cursor pointer
+ &:not(:checked) + label:before, &:checked + label:before
+   content ''
+   position absolute
+   left 0
+   top 0
+   width 1.5em
+   height 1.5em
+   border 2px solid #ccc
+   background #fff
+   border-radius 4px
+   box-shadow inset 0 1px 3px rgba(0, 0, 0, 0.1)
+ &:not(:checked) + label:after, &:checked + label:after
+   content '✔'
+   position absolute
+   top .2em
+   left .2em
+   font-size 1.2em
+   line-height 0.8
+   color gold
+   transition all .2s
+ &:not(:checked) + label:after
+   opacity 0
+   transform scale(0)
+ &:checked + label:after
+   opacity 1
+   transform scale(1)
+ &:disabled
+   &:not(:checked) + label:before
+     box-shadow none
+     border-color #bbb
+     background-color #ddd
+   &:checked + label
+     &:before
+       box-shadow none
+       border-color #bbb
+       background-color #ddd
+     &:after
+       color #999
+   + label
+     color #aaa
+ &:checked:focus + label:before, &:not(:checked):focus + label:before
+   border 2px solid #4778d9
+
+
+label:hover:before
+  border 2px solid #4778d9 !important
+
