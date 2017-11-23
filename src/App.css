@@ -600,7 +600,7 @@ opacity 0,
   width: 260px;
   border: 0;
   border: 2px solid #dbdbdb;
-  padding: 0.25em 1.9em 0.25em 0.1em;
+  padding: 0.25em 1.9em 0.25em 0.5em;
   border-radius: 30px;
   font-size: 1.15em;
   transition: 0.3s;
@@ -609,9 +609,15 @@ opacity 0,
 .my-input-search-icon {
   font-size: 1.15em;
 }
+.my-input-search-icon-lupe {
+  font-size: 1.15em;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
 .my-input-search input {
   color: #d50a3d;
-  padding: 5px 0 5px 16px;
+  padding: 5px 0 5px 20px;
   border: 0;
   font-size: 0.9em;
   width: 95%;
@@ -772,8 +778,18 @@ body {
 }
 .my-nav {
   min-width: 270px;
+  height: 100%;
   transition: 0.4s;
-  border-right: 3px solid #dbdbdb;
+  position: relative;
+}
+.my-nav:after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #dbdbdb;
+  position: absolute;
+  right: -1px;
+  top: 0;
 }
 .my-nav-list {
   list-style: none;
@@ -872,4 +888,19 @@ input[type="checkbox"].check:not(:checked):focus + label:before {
 }
 label:hover:before {
   border: 2px solid #4778d9 !important;
+}
+.panel-header {
+  width: 100%;
+}
+.panel-header-first {
+  width: 14%;
+}
+.panel-header-second {
+  width: 50%;
+}
+.panel-header-third {
+  width: 18%;
+}
+.panel-header-fourth {
+  width: 18%;
 }

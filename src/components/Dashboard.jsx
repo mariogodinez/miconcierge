@@ -8,7 +8,11 @@ class Dashboard extends Component {
         return (
             <div className="flex">
                 <Menu></Menu>
-                <h2>Dashboard</h2>
+                <section class="dashboard width100">
+                    <article class="margin0-20 padding20-0 border-bottom2">
+                        <h2 class="color-fuchia text-center">Dashboard</h2>
+                    </article>
+                </section>
             </div>
         )
     }
