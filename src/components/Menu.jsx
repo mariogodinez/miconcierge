@@ -9,7 +9,7 @@ class Menu extends Component {
         return (
             <div>
                 <nav className="my-nav">
-                    <figure className="center-block margin-top20">
+                    <figure className="center-block padding20">
                         <img src="./img/miconcierge.png" className="width100" alt="logo miconcierge" />
                     </figure>
                     <ul className="my-nav-list">
@@ -54,6 +54,24 @@ class Menu extends Component {
                             </Link>
                         </li>
                     </ul>
+
+                    <div className="my-nav-actions">
+                        <ul className="my-nav-list">
+                            <li className="my-nav-list-item border0 font15">
+                                <Link to="promos" className="flex">
+                                    <span className="ion-gear-a my-nav-list-icon margin-right10"></span>
+                                    <span className="margin-right10">Settings</span>
+                                </Link>
+                            </li>
+
+                            <li className="my-nav-list-item border0 font15">
+                                <Link to="promos" className="flex">
+                                    <span className="fa fa-sign-out my-nav-list-icon margin-right10"></span>
+                                    <span className="margin-right10">Log out</span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                     
                 </nav>
             </div>

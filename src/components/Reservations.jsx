@@ -28,7 +28,7 @@ class Reservations extends Component {
 
     render () {
         return (
-            <div className="flex">
+            <div className="flex height85vh">
                 <Menu></Menu>
                 <section className="width100">
                     <article className="margin0-20 padding20-0 border-bottom2">

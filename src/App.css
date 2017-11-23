@@ -382,6 +382,9 @@ h6 {
 .height100vh {
   height: 100vh;
 }
+.height85vh {
+  height: 85vh;
+}
 .height100 {
   height: 100%;
 }
@@ -790,6 +793,10 @@ body {
   position: absolute;
   right: -1px;
   top: 0;
+}
+.my-nav-actions {
+  position: absolute;
+  bottom: 0;
 }
 .my-nav-list {
   list-style: none;

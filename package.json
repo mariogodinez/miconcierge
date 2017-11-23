@@ -11,6 +11,7 @@
   "scripts": {
     "styles": "stylus -w src/styles/app.styl -o src/App.css",
     "start": "npm run styles & react-scripts start",
+    "serve": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
