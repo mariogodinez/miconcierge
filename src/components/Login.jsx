@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
+
 
 
 class Login extends Component {
+    login(){
+        browserHistory.push('/dashboard')
+    }
+
     render() {
         return (
-            <div>
+            <div className="">
                 <section class="login height100">
                     <article class="login-box height100vh flex">
                         <div class="padding20 back-darkpurple width100 text-center flex flex-column flex-middle flex-center">
@@ -40,7 +46,7 @@ class Login extends Component {
                                 </div>
 
                                 <div class="margin-bottom15">
-                                    <button class="my-btn padding1em back-fuchia color-white width100 hvr-wobble-skew">
+                                    <button onClick={ () => this.login()} class="my-btn padding1em back-fuchia color-white width100 hvr-wobble-skew">
                                         <span>Login</span>
                                     </button>
                                 </div>

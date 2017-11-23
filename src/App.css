@@ -727,7 +727,16 @@ opacity 0,
 body {
   margin: 0;
   padding: 0;
-  background: grisclaro;
+  background: #d50a3d;
+}
+#root {
+  width: 90vw;
+  max-height: 85vh;
+  min-height: 85vh;
+  font-family: 'Lato', 'sans-serif';
+  border-radius: 5px !important;
+  overflow: hidden;
+  background: #fff;
 }
 .main-content {
   padding-top: 30px;
@@ -762,7 +771,7 @@ body {
   height: 100%;
 }
 .my-nav {
-  width: 27%;
+  min-width: 270px;
   transition: 0.4s;
   border-right: 3px solid #dbdbdb;
 }
