@@ -52,9 +52,9 @@ class Reservations extends Component {
                         </section>
                         <section className="margin-left20 margin-right20">
                             <div className="my-input-search margin10 flex flex-middle relative">
-                                <span className="ion-ios-search my-input-search-icon-lupe relative"></span>
+                                <span className="ion-levels my-input-search-icon-lupe relative"></span>
                                 <input type="" name="" placeholder="Search ..." className="flex" />
-                                <span className="ion-levels my-input-search-icon absolute"></span>
+                                <span className="ion-ios-search my-input-search-icon absolute"></span>
                             </div>
                         </section>
                     </article>

@@ -18,8 +18,10 @@ class MenuInbox extends Component {
                         <figure className="center-block padding20">
                             <img src="./img/miconcierge.png" className="width100" alt="logo miconcierge" />
                         </figure>
-                        <div>
-                            <span className="fa fa-toggle-on"></span>
+                        <div className="my-nav-inbox-switch flex flex-middle">
+                            <span className="color-fuchia" style={{marginRight: 3 + 'px'}}>On</span>
+                            <span className="fa fa-toggle-on color-fuchia font25"></span>
+                            <span style={{marginLeft: 3 + 'px'}}>Off</span>
                         </div>
                     </article>
 
