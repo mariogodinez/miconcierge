@@ -7,6 +7,7 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import Reservations from './components/Reservations'
 import ReservationView from './components/ReservationView'
+import Products from './components/Products'
 
 import Inbox from './components/Inbox'
 
@@ -18,6 +19,8 @@ ReactDOM.render( <Router path="/" history={ browserHistory }>
     <Route path="/dashboard" component={ Dashboard } />
     <Route path="/reservations" component={ Reservations } />
     <Route path="/reservation-view" component={ ReservationView } />
+    <Route path="/products" component={ Products } />
+    
     <Route path="/inbox" component={ Inbox } />
 
 </Router>, document.getElementById('root'));
