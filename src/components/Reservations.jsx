@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
 import Menu from './Menu'
 
 
@@ -24,6 +25,10 @@ class Reservations extends Component {
             ],
             tabActive: 'All',
         }
+    }
+
+    goReservation(){
+        browserHistory.push('/reservation-view')
     }
 
     render () {
@@ -84,7 +89,9 @@ class Reservations extends Component {
                     {/* <section className="padding-bottom20 reservations" style="height:calc(85vh - 30vh); overflow-y:auto;"> */}
                     { this.state.clients.map(tab => {
                                 return (
-                                    <section className="padding-bottom20 reservations">
+                                    <section className="padding-bottom20 reservations" onClick={()=>{
+                                        this.goReservation()
+                                    }}>
                                         <article className="flex width100 padding10-0 pointer reservations-list panel-header">
                                             
                                             <div className="padding0-10 flex flex-center panel-header-first" >
