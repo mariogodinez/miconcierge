@@ -29,7 +29,7 @@ class Menu extends Component {
                             </Link>
                         </li>
                         <li className="my-nav-list-item">
-                            <Link to="inbox" className="flex">
+                            <Link to="/inbox" className="flex">
                                 <span className="ion-ios-filing-outline my-nav-list-icon margin-right10"></span>
                                 <span className="margin-right10">Inbox</span>
                                 <span className="my-badge back-fuchia flex flex-middle flex-center">11</span>

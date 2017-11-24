@@ -37,6 +37,9 @@ h6 {
 .flex {
   display: flex !important;
 }
+.flex-none {
+  flex: none;
+}
 .flex-between {
   justify-content: space-between;
 }
@@ -778,6 +781,60 @@ body {
 .app-header .logo img {
   width: 100%;
   height: 100%;
+}
+.my-nav-inbox {
+  min-width: 270px;
+  height: 100%;
+  transition: 0.4s;
+  position: relative;
+}
+.my-nav-inbox:after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #dbdbdb;
+  position: absolute;
+  right: -1px;
+  top: 0;
+}
+.my-nav-inbox-list {
+  margin: 0;
+}
+.my-nav-inbox-list-item {
+  margin: 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+.my-nav-inbox-list-item-img {
+  width: 50px;
+  height: 50px;
+}
+.my-nav-inbox-list-item-copy {
+  padding: 0;
+}
+.my-nav-inbox-list-item-copy-person {
+  margin: 0;
+  max-width: 80%;
+  height: 20px;
+  overflow: hidden;
+}
+.my-nav-inbox-list-item-copy-msg {
+  width: 92%;
+  height: 20px;
+  overflow: hidden;
+}
+.my-nav-inbox-list-item-actions {
+  color: #909090;
+  position: absolute;
+  right: 5px;
+  top: 26px;
+  font-size: 0.9em;
+}
+.my-nav-inbox-list-item-actions-action {
+  transition: 0.3s;
+}
+.my-nav-inbox-list-item-actions-action:hover {
+  color: #000;
+  cursor: pointer;
 }
 .my-nav {
   min-width: 270px;

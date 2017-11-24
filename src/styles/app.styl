@@ -50,7 +50,50 @@ body
       width 100%
       height 100%
 
+.my-nav-inbox
+  min-width 270px 
+  height 100%
+  transition .4s
+  position relative
+  &:after
+    content ''
+    width 2px 
+    height 100%
+    background #dbdbdb
+    position absolute
+    right -1px
+    top 0
+  &-list
+    margin 0
+    &-item
+      margin 0
+      border-bottom 1px solid lightgray
+      &-img
+        width 50px
+        height 50px
+      &-copy
+        padding 0
+        &-person
+          margin 0
+          max-width 80%
+          height 20px
 
+          overflow hidden
+        &-msg
+          width 92%
+          height 20px
+          overflow hidden
+      &-actions
+        color gray
+        position absolute
+        right 5px
+        top 26px
+        font-size .9em
+        &-action
+          transition .3s
+          &:hover
+            color black
+            cursor pointer
 .my-nav
   min-width 270px 
   height 100%
