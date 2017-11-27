@@ -88,6 +88,9 @@ h6 {
 .margin0-20 {
   margin: 0 20px;
 }
+.margin0-30 {
+  margin: 0 30px;
+}
 .margin5 {
   margin: 5px;
 }
@@ -378,6 +381,9 @@ h6 {
 }
 .round10 {
   border-radius: 10px;
+}
+.roundTop10 {
+  border-radius: 10px 10px 0 0;
 }
 .height220 {
   height: 220px;
@@ -967,4 +973,15 @@ label:hover:before {
 }
 .panel-header-fourth {
   width: 18%;
+}
+.heightSectionScroll {
+  height: calc(85vh - 20vh);
+  overflow-y: auto;
+}
+.message-actions {
+  border-top: 2px solid #dbdbdb;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
 }

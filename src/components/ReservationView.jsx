@@ -54,7 +54,7 @@ class ReservationView extends Component {
 				</div>
 			</article>
 
-			<section class="padding-bottom20">
+			<section class="padding-bottom20 heightSectionScroll" >
 				<article class="flex flex-between width100 padding0">
 					<div class="flex margin-left10">
                         <div class="padding0-10 flex flex-center">

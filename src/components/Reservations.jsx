@@ -8,7 +8,7 @@ class Reservations extends Component {
         super(props)
 
         this.state = {
-            clients: [1,2,3],
+            clients: [1,2,3,4,5],
             tabs: [{
                 name: 'All',
                 items: 2
@@ -87,9 +87,11 @@ class Reservations extends Component {
                     </article>
 
                     {/* <section className="padding-bottom20 reservations" style="height:calc(85vh - 30vh); overflow-y:auto;"> */}
+                    <div className="heightSectionScroll width100 padding-bottom30">
                     { this.state.clients.map(tab => {
                                 return (
-                                    <section className="padding-bottom20 reservations" onClick={()=>{
+                                    
+                                <section className="reservations " onClick={()=>{
                                         this.goReservation()
                                     }}>
                                         <article className="flex width100 padding10-0 pointer reservations-list panel-header">
@@ -124,9 +126,11 @@ class Reservations extends Component {
                                             </div>
                                         </article>
                                     </section>
+                                   
+                                    
                                 )
                             }) }
-                    
+                     </div>
 
                     
                 </section>

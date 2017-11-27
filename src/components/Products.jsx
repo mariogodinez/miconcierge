@@ -34,7 +34,7 @@ class Products extends Component {
                         </section>
                     </article>
 
-                    <section className="padding-bottom20 center-block">
+                    <section className="padding-bottom20 center-block heightSectionScroll">
                         <div className="width100">
                             <article className="flex width100">
                                 <div className="padding10-20 width100 flex flex-middle flex-between">
@@ -46,7 +46,7 @@ class Products extends Component {
                             <article className="flex">
                                 <div className="margin20 round10 shadowCard pointer">
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
-                                        <img src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" className="width100" />
+                                        <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
                                     <div className="padding5-15">
                                         <h4 className="margin0 color-darkblue opacity80">Dinner metting</h4>
@@ -73,7 +73,7 @@ class Products extends Component {
                             <article className="flex">
                                 <div className="margin20 round10 shadowCard pointer">
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
-                                        <img src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" className="width100"  />
+                                        <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
                                     <div className="padding5-15">
                                         <h4 className="margin0 color-darkblue opacity80">Dinner metting</h4>
@@ -99,7 +99,7 @@ class Products extends Component {
                             <article className="flex">
                                 <div className="margin20 round10 shadowCard pointer">
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
-                                        <img src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" className="width100" />
+                                        <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
                                     <div className="padding5-15">
                                         <h4 className="margin0 color-darkblue opacity80">Dinner metting</h4>
