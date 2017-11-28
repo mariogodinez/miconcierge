@@ -10,7 +10,7 @@ class Products extends Component {
         
     }
 
-    goReservation(){
+    goProduct(){
         browserHistory.push('/product-view')
     }
 
@@ -44,7 +44,7 @@ class Products extends Component {
                             </article>
 
                             <article className="flex">
-                                <div className="margin20 round10 shadowCard pointer">
+                                <div className="margin20 round10 shadowCard pointer" onClick={()=>{ this.goProduct() }}>
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
                                         <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
@@ -71,7 +71,7 @@ class Products extends Component {
                             </article>
 
                             <article className="flex">
-                                <div className="margin20 round10 shadowCard pointer">
+                                <div className="margin20 round10 shadowCard pointer" onClick={()=>{ this.goProduct() }}>
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
                                         <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
@@ -97,7 +97,7 @@ class Products extends Component {
                             </article>
 
                             <article className="flex">
-                                <div className="margin20 round10 shadowCard pointer">
+                                <div className="margin20 round10 shadowCard pointer" onClick={()=>{ this.goProduct() }}>
                                     <figure className="margin0" style={{width : 20.3 + 'vw'}}>
                                         <img className="roundTop10 width100" src="https://cdn-jpg3.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/shutterstock_185740553.jpg?itok=xdSGDCK8&timestamp=1487780910" />
                                     </figure>
