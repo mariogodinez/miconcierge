@@ -55,7 +55,7 @@ class ReservationView extends Component {
 			</article>
 
 			<section class="padding-bottom20 heightSectionScroll" >
-				<article class="flex flex-between width100 padding0">
+				<article class="flex flex-between width100 padding0 margin-bottom30">
 					<div class="flex margin-left10">
                         <div class="padding0-10 flex flex-center">
                             <figure class="margin0 rounded border2 color-fuchia square70">
@@ -74,13 +74,101 @@ class ReservationView extends Component {
 						<button class="my-btn flex flex-middle back-lightblue color-white">
 							<span class="margin-right10 ion-ios-checkmark-outline font30"></span>
 							<span class="">Check in</span>
-							
 						</button>
 						{/* <span class="ion-ios-close-outline font30" ></span>
 						<span class="ion-ios-clock-outline font30"></span> */}
-
 					</div>
 				</article>
+
+
+				<article className="flex color-gray width100 padding20-0 relative" style={{top: 20 + 'px'}}>
+					<div className="margin0 padding20" style={{width: 90 + 'px'}}>
+
+					</div>
+					<div className="" style={{width: 30 + '%'}}>
+						<h3>Date</h3>
+					</div>
+
+					<div className="" style={{width: 40 + '%'}}>
+						<h3>Time</h3>
+					</div>
+
+					<div className="" style={{width: 15 + '%'}}>
+						<h3>People</h3>
+					</div>
+
+					<div className="" style={{width: 15 + '%'}}>
+						<h3>Status</h3>
+					</div>
+
+				</article>
+
+
+				<article className="flex color-gray width100">
+					<div className="margin0 padding10-20" style={{width: 90 + 'px'}}>
+
+					</div>
+					<div className="" style={{width: 30 + '%'}}>
+						<h3 className="font30 color-fuchia font-normal">Nov 28</h3>
+					</div>
+
+					<div className="" style={{width: 40 + '%'}}>
+						<h3 className="font30 color-fuchia font-normal">20:30 Hrs.</h3>
+					</div>
+
+					<div className="" style={{width: 15 + '%'}}>
+						<h3 className="font30 color-fuchia font-normal">4</h3>
+					</div>
+
+					<div className="" style={{width: 15 + '%'}}>
+						<h3>Status</h3>
+					</div>
+
+				</article>
+					<div className="relative" style={{top: 30 + 'px'}}>
+						<article className="flex color-gray width100 padding20-0" >
+						<div className="margin0 padding20" style={{width: 90 + 'px'}}>
+
+						</div>
+						<div className="" style={{width: 30 + '%'}}>
+							<h3>Total Consumption</h3>
+						</div>
+
+						<div className="" style={{width: 40 + '%'}}>
+							<h3>Hotel: (Comes From...)</h3>
+						</div>
+
+						<div className="" style={{width: 15 + '%'}}>
+						</div>
+
+						<div className="" style={{width: 15 + '%'}}>
+						</div>
+
+					</article>
+					<article className="flex color-gray width100">
+						<div className="margin0 padding10-20" style={{width: 90 + 'px'}}>
+
+						</div>
+						<div className="" style={{width: 30 + '%'}}>
+							<h3 className="font30 color-fuchia font-normal">$600</h3>
+						</div>
+
+						<div className="" style={{width: 40 + '%'}}>
+							<h3 className="font30 color-black font-normal">Iberostar</h3>
+						</div>
+
+						<div className="" style={{width: 15 + '%'}}>
+						</div>
+
+						<div className="" style={{width: 15 + '%'}}>
+						</div>
+
+					</article>
+					</div>
+				
+
+
+				
 			</section>
 		</section>
         </div>
