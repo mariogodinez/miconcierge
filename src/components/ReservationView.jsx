@@ -82,7 +82,7 @@ class ReservationView extends Component {
 
 
 				<article className="flex color-gray width100 padding20-0 relative" style={{top: 20 + 'px'}}>
-					<div className="margin0 padding20" style={{width: 90 + 'px'}}>
+					<div className="margin0 padding0" style={{width:130 + 'px'}}>
 
 					</div>
 					<div className="" style={{width: 30 + '%'}}>
@@ -126,44 +126,44 @@ class ReservationView extends Component {
 
 				</article>
 					<div className="relative" style={{top: 30 + 'px'}}>
-						<article className="flex color-gray width100 padding20-0" >
-						<div className="margin0 padding20" style={{width: 90 + 'px'}}>
+						<article className="flex color-gray width100 padding-bottom5" >
+							<div className="margin0 padding0" style={{width: 130 + 'px'}}>
 
-						</div>
-						<div className="" style={{width: 30 + '%'}}>
-							<h3>Total Consumption</h3>
-						</div>
+							</div>
+							<div className="" style={{width: 30 + '%'}}>
+								<h3>Total Consumption</h3>
+							</div>
 
-						<div className="" style={{width: 40 + '%'}}>
-							<h3>Hotel: (Comes From...)</h3>
-						</div>
+							<div className="" style={{width: 40 + '%'}}>
+								<h3>Hotel: (Comes From...)</h3>
+							</div>
 
-						<div className="" style={{width: 15 + '%'}}>
-						</div>
+							<div className="" style={{width: 15 + '%'}}>
+							</div>
 
-						<div className="" style={{width: 15 + '%'}}>
-						</div>
+							<div className="" style={{width: 15 + '%'}}>
+							</div>
 
-					</article>
-					<article className="flex color-gray width100">
-						<div className="margin0 padding10-20" style={{width: 90 + 'px'}}>
+						</article>
+						<article className="flex color-gray width100">
+							<div className="margin0 padding0-20" style={{width: 90 + 'px'}}>
 
-						</div>
-						<div className="" style={{width: 30 + '%'}}>
-							<h3 className="font30 color-fuchia font-normal">$600</h3>
-						</div>
+							</div>
+							<div className="" style={{width: 30 + '%'}}>
+								<h3 className="font30 color-fuchia font-normal">$600</h3>
+							</div>
 
-						<div className="" style={{width: 40 + '%'}}>
-							<h3 className="font30 color-black font-normal">Iberostar</h3>
-						</div>
+							<div className="" style={{width: 40 + '%'}}>
+								<h3 className="font30 color-black font-normal">Iberostar</h3>
+							</div>
 
-						<div className="" style={{width: 15 + '%'}}>
-						</div>
+							<div className="" style={{width: 15 + '%'}}>
+							</div>
 
-						<div className="" style={{width: 15 + '%'}}>
-						</div>
+							<div className="" style={{width: 15 + '%'}}>
+							</div>
 
-					</article>
+						</article>
 					</div>
 				
 
