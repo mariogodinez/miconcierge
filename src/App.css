@@ -1026,7 +1026,7 @@ label:hover:before {
   padding: 10px;
 }
 .companyInfo-stateLine {
-  max-width: 800px;
+  width: 80%;
   position: relative;
 }
 .companyInfo-stateLine:after {
