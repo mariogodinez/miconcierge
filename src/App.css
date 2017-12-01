@@ -266,6 +266,9 @@ h6 {
 .padding-bottom20 {
   padding-bottom: 20px;
 }
+.padding-bottom0 {
+  padding-bottom: 0 !important;
+}
 .color-white {
   color: #fff;
 }
@@ -383,13 +386,13 @@ h6 {
   margin-right: auto;
 }
 .rounded {
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 .round10 {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 .round20 {
-  border-radius: 20px;
+  border-radius: 20px !important;
 }
 .roundTop10 {
   border-radius: 10px 10px 0 0;
@@ -416,9 +419,25 @@ h6 {
   width: 40px;
   height: 40px;
 }
+.square50 {
+  width: 50px;
+  height: 50px;
+}
+.square60 {
+  width: 60px;
+  height: 60px;
+}
+.square30 {
+  width: 30px;
+  height: 30px;
+}
 .square25 {
   width: 25px;
   height: 25px;
+}
+.square20 {
+  width: 20px;
+  height: 20px;
 }
 .square70 {
   width: 70px;
@@ -706,6 +725,12 @@ opacity 0,
 .border2gold {
   border: 2px solid #ffd700;
 }
+.border2 {
+  border: 2px solid;
+}
+.border1 {
+  border: 1px solid;
+}
 .opacity50 {
   opacity: 0.5;
 }
@@ -764,8 +789,8 @@ body {
 }
 #root {
   width: 90vw;
-  max-height: 85vh;
-  min-height: 85vh;
+  max-height: 86vh;
+  min-height: 86vh;
   font-family: 'Lato', 'sans-serif';
   border-radius: 5px !important;
   overflow: hidden;
@@ -999,4 +1024,17 @@ label:hover:before {
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
+}
+.companyInfo-stateLine {
+  max-width: 800px;
+  position: relative;
+}
+.companyInfo-stateLine:after {
+  content: '';
+  width: 84%;
+  background: #909090;
+  height: 3px;
+  position: absolute;
+  top: 23px;
+  left: 70px;
 }

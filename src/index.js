@@ -9,6 +9,7 @@ import Reservations from './components/Reservations'
 import ReservationView from './components/ReservationView'
 import Products from './components/Products'
 import ProductView from './components/ProductView'
+import Settings from './components/Settings'
 
 
 import Inbox from './components/Inbox'
@@ -23,6 +24,8 @@ ReactDOM.render( <Router path="/" history={ browserHistory }>
     <Route path="/reservation-view" component={ ReservationView } />
     <Route path="/products" component={ Products } />
     <Route path="/product-view" component={ ProductView } />
+    <Route path="/settings" component={ Settings } />
+    
     
     
     <Route path="/inbox" component={ Inbox } />

@@ -71,7 +71,7 @@ class ReservationView extends Component {
 					</div>
 
 					<div class="padding0 text-center flex flex-center flex-middle margin-right20">
-						<button class="my-btn flex flex-middle back-lightblue color-white">
+						<button class="round10 my-btn flex flex-middle back-lightblue color-white">
 							<span class="margin-right10 ion-ios-checkmark-outline font30"></span>
 							<span class="">Check in</span>
 						</button>
@@ -125,7 +125,7 @@ class ReservationView extends Component {
 					</div>
 
 				</article>
-					<div className="relative" style={{top: 30 + 'px'}}>
+					<div className="relative" style={{marginTop: 20 + 'px'}}>
 						<article className="flex color-gray width100 padding-bottom5" >
 							<div className="margin0 padding0" style={{width: 130 + 'px'}}>
 
@@ -165,6 +165,45 @@ class ReservationView extends Component {
 
 						</article>
 					</div>
+
+					<div className="border1 color-lightgray margin20" style={{width: 95 + '%'}}></div>
+
+					<article class="flex width100">
+				
+						<div class="padding0-10 flex flex-right" style={{width: 90 + 'px'}}>
+							<figure class="margin0 rounded border2 color-fuchia square40">
+                                <img src="https://scontent.fgdl1-2.fna.fbcdn.net/v/t1.0-9/19224935_10207926979927346_4253521002093344347_n.jpg?oh=30cec9bcfc8d89bf2c4a11734cd0a26a&oe=5A6C6420" class="width100 rounded height100" />
+                            </figure>
+						</div>
+
+						<div class="padding0-10" style={{width: 25 + '%'}}>
+							<h3 class="color-gray">
+								Promoter:
+							</h3>
+
+							<h3 class="color-black font30 font-normal">
+								Arturo López
+							</h3>
+						</div>
+
+						<div class="padding0" style={{width: 40 + '%'}}>
+							<h3 class="color-gray">
+								Phone:
+							</h3>
+
+							<h3 class="color-black font30 font-normal">
+								+55 999 321 23 32
+							</h3>
+						</div>
+
+						<div class="padding0-10 text-center flex flex-center flex-middle">
+							<button style={{width: 100 + 'px'}} class="my-btn flex flex-middle flex-between back-white color-lightblue border2 round10">
+								<span class="">Chat</span>
+								<span class="ion-chatbox-working font30"></span>
+								
+							</button>
+						</div>
+					</article>
 				
 
 
