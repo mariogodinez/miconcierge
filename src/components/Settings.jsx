@@ -3,6 +3,11 @@ import { browserHistory } from 'react-router'
 import Menu from './Menu'
 import BasicInformation from './BasicInformation'
 import ContactInformation from './ContactInformation'
+import OperationInformation from './OperationInformation'
+import Payments from './Payments'
+import Completed from './Completed'
+import SpecialServices from './SpecialServices'
+
 
 
 
@@ -12,11 +17,14 @@ class Settings extends Component {
         this.state = {
             showUserInfo: false,
             showCompanyInfo: false,
-            step: 2
+            step: 4
         }
+        // this.setStep = this.setStep.bind(this)
     }
 
-    setStep(){
+    setStep(number){
+        console.log(number)
+        this.setState({step: number})
         
     }
 
@@ -56,7 +64,8 @@ class Settings extends Component {
                     </article>
                     
                     {
-                        this.state.showUserInfo ? (<section className="flex flex-center">
+                        this.state.showUserInfo ? (
+                        <section className="flex flex-center flex-column relative">
                          <article className="margin0-20 padding10-0 flex flex-center padding-bottom0">
                             <div className="text-center flex flex-center flex-column flex-middle">
                                 <div className="back-fuchia square30 rounded flex flex-center flex-middle">
@@ -129,17 +138,14 @@ class Settings extends Component {
                                 </figure>
                             </div>
 
-                            <div className="flex flex-middle margin-right20">
-                                <p className="margin-right20 font20">Skip</p>
-                                <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}}>Save</button>
-                            </div>
+                            
                         </article>
                     </section>) : (
                         <div >
                             <section className="flex flex-center">
                             <article className="companyInfo-stateLine margin0-20 padding20 flex flex-between padding-bottom0">
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-fuchia square30 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(1) }>
+                                    <div className="zIndex10 back-fuchia square30 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         <span className="ion-checkmark color-white font18"></span>
                                     </div>
                                     <div className="relative color-fuchia" style={{top:  25 + 'px'}}>
@@ -149,61 +155,61 @@ class Settings extends Component {
                                     
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(2) }>
+                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Contact</p>
                                         <p className=" font-bold">Information</p> 
                                     </div>
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(3) }>
+                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Operation</p>
                                         <p className=" font-bold">Information</p> 
                                     </div>
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(4) }>
+                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Payments</p>
                                         <p className=" font-bold opacity0">.</p> 
                                     </div>
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(5) }>
+                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Special</p>
-                                        <p className=" font-bold opacity0">Requirements</p> 
+                                        <p className=" font-bold">Requirements</p> 
                                     </div>
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(6) }>
+                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Special</p>
-                                        <p className=" font-bold opacity0">Services & Addons</p> 
+                                        <p className=" font-bold">Services & Addons</p> 
                                     </div>
                                 </div>
 
-                                <div className="text-center flex flex-center flex-column flex-middle relative">
-                                    <div className="back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
+                                <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(7) }>
+                                    <div className="zIndex10 back-green square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
                                         {/* <span className="ion-checkmark color-white font18"></span> */}
                                     </div>
-                                    <div className="relative color-gray font15" style={{top:  25 + 'px'}}>
+                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Completed</p>
                                         <p className=" font-bold opacity0">.</p> 
                                     </div>
@@ -212,15 +218,20 @@ class Settings extends Component {
                             </section>
                             {
                                         
-                                this.state.step == 1 ? <BasicInformation></BasicInformation> : this.state.step == 2 ? <ContactInformation></ContactInformation> : ''
+                                this.state.step == 1 ? <BasicInformation></BasicInformation> : this.state.step == 2 ? <ContactInformation></ContactInformation> : this.state.step == 3 ? <OperationInformation></OperationInformation> : this.state.step == 4 ? <Payments></Payments> : 
+                                this.state.step == 6 ? <SpecialServices></SpecialServices> :  this.state.step == 7 ? <Completed></Completed> :''
                             }
                         </div>
                         
                         )
                     }
                     
-                   
+                     <div className="flex flex-middle margin-right20 skipSave">
+                        <p className="margin-right20 font20">Skip</p>
+                        <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}}>Save</button>
+                    </div>
                 </section>
+               
             </div>
         )
     }
