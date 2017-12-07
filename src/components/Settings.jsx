@@ -16,9 +16,6 @@ class Settings extends Component {
         }
     }
 
-    setStep(){
-        
-    }
 
     goBack(){
         browserHistory.goBack()
@@ -47,7 +44,6 @@ class Settings extends Component {
         return (
             <div className="flex">
                 <Menu></Menu>
-
                 <section className="width100">
                     <article className="margin0-20 relative padding20-0 border-bottom2 flex flex-between flex-middle">
                         <span style={{top: 30 + '%', left: -5 + 'px'}} className="absolute ion-arrow-left-c font30 margin-left20 color-gray pointer hover-fuchia" onClick={ () => this.goBack()}></span>
