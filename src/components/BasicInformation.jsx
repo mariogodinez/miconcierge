@@ -63,10 +63,6 @@ class BasicInformation extends Component {
                     </figure>
                 </div>
 
-                <div className="flex flex-middle margin-right20">
-                    <p className="margin-right20 font20">Skip</p>
-                    <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}}>Save</button>
-                </div>
             </article>
         </section>
         )

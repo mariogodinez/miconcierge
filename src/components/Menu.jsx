@@ -56,8 +56,8 @@ class Menu extends Component {
                     </ul>
 
                     <div className="my-nav-actions">
-                        <ul className="my-nav-list">
-                            <li className="my-nav-list-item border0 font15">
+                        <ul className="my-nav-list flex flex-between">
+                            <li className="my-nav-list-item border0 font15 margin-right10">
                                 <Link to="settings" className="flex">
                                     <span className="ion-gear-a my-nav-list-icon margin-right10"></span>
                                     <span className="margin-right10">Settings</span>

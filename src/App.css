@@ -130,6 +130,9 @@ h6 {
 .margin-right30 {
   margin-right: 30px;
 }
+.margin-right50 {
+  margin-right: 50px;
+}
 .margin-top5 {
   margin-top: 5px;
 }
@@ -486,6 +489,9 @@ h6 {
 .widthHalf {
   width: 50%;
 }
+.zIndex10 {
+  z-index: 10 !important;
+}
 .list-style-none {
   list-style: none;
 }
@@ -503,6 +509,9 @@ h6 {
 }
 .back-facebook {
   background: #3b5998;
+}
+.back-green {
+  background: #0ad20a;
 }
 .back-darkgray {
   background: #3f3f3f;
@@ -731,6 +740,9 @@ opacity 0,
 .border1 {
   border: 1px solid;
 }
+.opacity0 {
+  opacity: 0;
+}
 .opacity50 {
   opacity: 0.5;
 }
@@ -739,6 +751,40 @@ opacity 0,
 }
 .shadowCard {
   box-shadow: 0 0 15px #909090;
+}
+.checkWrap {
+  width: 26px !important;
+  height: 26px !important;
+  background: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  border: 1px solid #3f3f3f;
+  border-radius: 50%;
+  z-index: 1 !important;
+}
+.check-icon {
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  opacity: 0;
+}
+.checkWrap input {
+  width: 22px !important;
+  height: 22px !important;
+  background: #fff;
+  position: absolute;
+  left: 2px;
+  z-index: 3;
+  top: 2px;
+  border-radius: 50%;
+  opacity: 0;
+}
+.checkWrap input:checked ~ .check-icon {
+  opacity: 1;
 }
 @media (min-width: 980px) {
   .rightToMobile {
@@ -832,16 +878,7 @@ body {
   min-width: 270px;
   height: 100%;
   transition: 0.4s;
-  position: relative;
-}
-.my-nav-inbox:after {
-  content: '';
-  width: 2px;
-  height: 100%;
-  background: #dbdbdb;
-  position: absolute;
-  right: -1px;
-  top: 0;
+  border-right: 2px solid #dbdbdb;
 }
 .my-nav-inbox-list {
   margin: 0;
@@ -886,16 +923,7 @@ body {
   min-width: 270px;
   height: 100%;
   transition: 0.4s;
-  position: relative;
-}
-.my-nav:after {
-  content: '';
-  width: 2px;
-  height: 100%;
-  background: #dbdbdb;
-  position: absolute;
-  right: -1px;
-  top: 0;
+  border-right: 2px solid #dbdbdb;
 }
 .my-nav-actions {
   position: absolute;
@@ -1003,10 +1031,10 @@ label:hover:before {
   width: 100%;
 }
 .panel-header-first {
-  width: 14%;
+  width: 30%;
 }
 .panel-header-second {
-  width: 50%;
+  width: 30%;
 }
 .panel-header-third {
   width: 18%;
@@ -1016,6 +1044,10 @@ label:hover:before {
 }
 .heightSectionScroll {
   height: calc(85vh - 27vh);
+  overflow-y: auto;
+}
+.messageInput {
+  height: 50px;
   overflow-y: auto;
 }
 .message-actions {
@@ -1037,4 +1069,9 @@ label:hover:before {
   position: absolute;
   top: 23px;
   left: 70px;
+}
+.skipSave {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
 }

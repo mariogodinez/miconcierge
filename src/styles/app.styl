@@ -55,15 +55,7 @@ body
   min-width 270px 
   height 100%
   transition .4s
-  position relative
-  &:after
-    content ''
-    width 2px 
-    height 100%
-    background #dbdbdb
-    position absolute
-    right -1px
-    top 0
+  border-right 2px solid #dbdbdb
   &-list
     margin 0
     &-item
@@ -99,15 +91,7 @@ body
   min-width 270px 
   height 100%
   transition .4s
-  position relative
-  &:after
-    content ''
-    width 2px 
-    height 100%
-    background #dbdbdb
-    position absolute
-    right -1px
-    top 0
+  border-right 2px solid #dbdbdb
   &-actions
       position absolute
       bottom 0
@@ -196,9 +180,9 @@ label:hover:before
 .panel-header
   width 100%
   &-first
-    width 14%
+    width 30%
   &-second
-    width 50%
+    width 30%
   &-third
     width 18%
   &-fourth
@@ -208,7 +192,9 @@ label:hover:before
 .heightSectionScroll
   height calc(85vh - 27vh)
   overflow-y auto
-
+.messageInput
+  height 50px
+  overflow-y auto
 .message-actions
   border-top 2px solid lightgray
   width 90%
@@ -227,3 +213,8 @@ label:hover:before
     position absolute 
     top 23px
     left 70px
+
+.skipSave
+  position absolute
+  bottom 20px
+  right 40px

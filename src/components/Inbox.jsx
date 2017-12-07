@@ -65,7 +65,7 @@ class Inbox extends Component {
 
 								<section className="message-actions flex-center flex flex-middle flex-between">
 									<div className="flex width100">
-										<input className="my-input width100 border0" type="text" placeholder="Reply to Username"/>
+										<textarea className="my-input width100 border0 messageInput" type="text" placeholder="Reply to Username"></textarea>
 									</div>
 									<article className="flex flex-middle">
 										<div className="margin0-30">

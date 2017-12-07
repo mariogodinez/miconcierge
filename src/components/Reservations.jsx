@@ -61,9 +61,9 @@ class Reservations extends Component {
 
                     <article className="flex width100 panel-header">
                         
-                        <div className="padding10 flex flex-center panel-header-first">
-                            <h3 className="color-gray text-center">
-                                Promotor
+                        <div className="padding10 flex panel-header-first">
+                            <h3 className="color-gray">
+                                Recommended by
                             </h3>
                         </div>
 
@@ -94,12 +94,13 @@ class Reservations extends Component {
                                 <section className="reservations " onClick={()=>{
                                         this.goReservation()
                                     }}>
-                                        <article className="flex width100 padding10-0 pointer reservations-list panel-header">
+                                        <article className="flex width100 padding0 pointer reservations-list panel-header">
                                             
-                                            <div className="padding0-10 flex flex-center panel-header-first" >
-                                                <figure className="margin0 rounded border2 color-fuchia square70">
-                                                    <img src="https://scontent.fgdl1-2.fna.fbcdn.net/v/t1.0-9/19224935_10207926979927346_4253521002093344347_n.jpg?oh=30cec9bcfc8d89bf2c4a11734cd0a26a&oe=5A6C6420" className="width100 rounded height100" />
-                                                </figure>
+                                            <div className="padding0-10 panel-header-first" >
+                                                <h3 className="color-black font-normal font25 margin-bottom5">
+                                                Felipe Carrillo
+                                                </h3>
+                                                <p className="font18 color-gray">Hotel Xcaret</p>
                                             </div>
 
                                             <div className="padding10 panel-header-second">
