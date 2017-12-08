@@ -36,10 +36,10 @@ class Login extends Component {
                                 </div>
 
                                 <div class="margin-bottom30">
-                                    <input type="email" class="my-input" />
+                                    <input type="email" class="my-input" placeholder="Email"/>
                                 </div>
                                 <div class="margin-bottom10">
-                                    <input type="password" class="my-input" />
+                                    <input type="password" class="my-input" placeholder="Password"/>
                                 </div>
                                 <div class="margin-bottom30">
                                     <p class="margin0 font13 text-right pointer color-lightblue">Fogot Password?</p>

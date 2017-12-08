@@ -24,7 +24,7 @@ ReactDOM.render( <Router path="/" history={ browserHistory }>
     <Route path="/reservation-view" component={ ReservationView } />
     <Route path="/products" component={ Products } />
     <Route path="/product-view" component={ ProductView } />
-    <Route path="/settings" component={ Settings } />
+    <Route path="/settings" fuchia="true" component={ Settings } />
     
     
     

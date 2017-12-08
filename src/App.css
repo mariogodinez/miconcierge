@@ -512,6 +512,9 @@ h6 {
 }
 .back-green {
   background: #0ad20a;
+  top: -10px !important;
+  width: 30px !important;
+  height: 30px !important;
 }
 .back-darkgray {
   background: #3f3f3f;
@@ -1074,4 +1077,16 @@ label:hover:before {
   position: absolute;
   bottom: 20px;
   right: 40px;
+}
+.activeItem {
+  width: 30px !important;
+  height: 30px !important;
+  background: #d50a3d !important;
+  top: -10px !important;
+}
+.borderSectionBottom {
+  width: 50px;
+  border-bottom: 2px solid #d50a3d;
+  position: absolute;
+  bottom: -22px;
 }

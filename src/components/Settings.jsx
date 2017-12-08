@@ -17,7 +17,7 @@ class Settings extends Component {
         this.state = {
             showUserInfo: false,
             showCompanyInfo: false,
-            step: 4
+            step: 1
         }
         // this.setStep = this.setStep.bind(this)
     }
@@ -32,11 +32,18 @@ class Settings extends Component {
         browserHistory.goBack()
     }
 
-    changeView(boolean){
+    changeView(bo){
         const currentValUser = this.state.showUserInfo
         const currentValCompany = this.state.showCompanyInfo
         
-        this.setState({showUserInfo: !currentValUser, showCompanyInfo: !currentValCompany,})
+        this.setState({showUserInfo: bo, showCompanyInfo: !bo,})
+    }
+
+    next(){
+        if(this.state.step == 7){
+            return false
+        }
+        this.setState({step:  this.state.step + 1})
     }
 
     render(){
@@ -59,8 +66,15 @@ class Settings extends Component {
                 <section className="width100">
                     <article className="margin0-20 relative padding20-0 border-bottom2 flex flex-between flex-middle">
                         <span style={{top: 30 + '%', left: -5 + 'px'}} className="absolute ion-arrow-left-c font30 margin-left20 color-gray pointer hover-fuchia" onClick={ () => this.goBack()}></span>
-                        <h2 className={"text-center pointer " + this.state.showUserInfo ? 'color-fuchia' :''} style={{marginLeft: 25 + '%'}} onClick={ () => this.changeView()}>User info</h2>
-                        <h2 className={"text-center pointer " + this.state.showCompanyInfo ? 'color-fuchia' : ''} style={{marginRight: 25 + '%'}} onClick={ () => this.changeView()}>Company info</h2>
+                        <h2 className={`text-center pointer relative ${this.state.showUserInfo ? 'color-fuchia' : 'color-black'}`} style={{marginLeft: 25 + '%'}} onClick={ () => this.changeView(true)}>
+                            User info
+                            <p className={`borderSectionBottom ${ !this.state.showUserInfo ? 'hide' : ''}`} style={{left: 25 + 'px'}}></p>
+                        </h2>
+
+                        <h2 className={`text-center pointer relative ${ !this.state.showUserInfo ? 'color-fuchia' : 'color-black'}`} style={{marginRight: 25 + '%'}} onClick={ () => this.changeView(false)}>
+                            Company info
+                            <p className={`borderSectionBottom ${ this.state.showUserInfo ? 'hide' : ''}`} style={{left: 50 + 'px'}}></p>
+                        </h2>
                     </article>
                     
                     {
@@ -145,10 +159,10 @@ class Settings extends Component {
                             <section className="flex flex-center">
                             <article className="companyInfo-stateLine margin0-20 padding20 flex flex-between padding-bottom0">
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(1) }>
-                                    <div className="zIndex10 back-fuchia square30 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        <span className="ion-checkmark color-white font18"></span>
+                                    <div className={`zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute ${this.state.step == 1 ? 'activeItem' : ''}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 1 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-fuchia" style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 1 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                     <p className="font-bold">Basic</p>
                                         <p className="font-bold">Information</p> 
                                     </div>
@@ -156,60 +170,60 @@ class Settings extends Component {
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(2) }>
-                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center back-gray flex-middle absolute ${this.state.step == 2 ? 'activeItem' : ''}`}  style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 2 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 2 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Contact</p>
                                         <p className=" font-bold">Information</p> 
                                     </div>
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(3) }>
-                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center back-gray flex-middle absolute ${this.state.step == 3 ? 'activeItem' : ''}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 3 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 3 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Operation</p>
                                         <p className=" font-bold">Information</p> 
                                     </div>
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(4) }>
-                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center back-gray flex-middle absolute ${this.state.step == 4 ? 'activeItem' : ''}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 4 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 4 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Payments</p>
                                         <p className=" font-bold opacity0">.</p> 
                                     </div>
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(5) }>
-                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center back-gray flex-middle absolute ${this.state.step == 5 ? 'activeItem' : ''}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 5 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 5 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Special</p>
                                         <p className=" font-bold">Requirements</p> 
                                     </div>
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(6) }>
-                                    <div className="zIndex10 back-gray square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center back-gray flex-middle absolute ${this.state.step == 6 ? 'activeItem' : ''}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 6 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 6 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Special</p>
                                         <p className=" font-bold">Services & Addons</p> 
                                     </div>
                                 </div>
 
                                 <div className="text-center flex flex-center flex-column flex-middle relative pointer" onClick={() => this.setStep(7) }>
-                                    <div className="zIndex10 back-green square20 rounded flex flex-center flex-middle absolute" style={{top:  -5 + 'px'}}>
-                                        {/* <span className="ion-checkmark color-white font18"></span> */}
+                                    <div className={`zIndex10 square20 rounded flex flex-center flex-middle absolute ${this.state.step == 7 ? 'back-green' : 'back-gray'}`} style={{top:  -5 + 'px'}}>
+                                        <span className={`ion-checkmark color-white font18 ${this.state.step != 7 ? 'hide' : ''}`}></span>
                                     </div>
-                                    <div className="relative color-gray font15 " style={{top:  25 + 'px'}}>
+                                    <div className={`font15 relative ${this.state.step == 7 ? 'color-fuchia' : 'color-gray'}`} style={{top:  25 + 'px'}}>
                                         <p className=" font-bold">Completed</p>
                                         <p className=" font-bold opacity0">.</p> 
                                     </div>
@@ -227,7 +241,9 @@ class Settings extends Component {
                     }
                     
                      <div className="flex flex-middle margin-right20 skipSave">
-                        <p className="margin-right20 font20">Skip</p>
+                        <p className="margin-right20 font20 pointer" onClick={()=> {
+                            this.next()
+                         }}>Skip</p>
                         <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}}>Save</button>
                     </div>
                 </section>
