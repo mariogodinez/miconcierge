@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 import { browserHistory } from 'react-router'
-
+import is from 'is-js'
 
 
 class Login extends Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            email: '',
+            password: ''
+        }
+    }
+
     login(){
+        if(is.empty(this.state.email)  || is.empty(this.state.password)){
+
+            alert('Email es requerido y contrasena son requeridos')
+            return false
+        }
+        
         browserHistory.push('/dashboard')
     }
 
@@ -36,10 +51,10 @@ class Login extends Component {
                                 </div>
 
                                 <div class="margin-bottom30">
-                                    <input type="email" class="my-input" placeholder="Email"/>
+                                    <input type="email" class="my-input" placeholder="Email" onChange={e => this.setState({email: e.target.value})}/>
                                 </div>
                                 <div class="margin-bottom10">
-                                    <input type="password" class="my-input" placeholder="Password"/>
+                                    <input type="password" class="my-input" placeholder="Password" onChange={e => this.setState({password: e.target.value})}/>
                                 </div>
                                 <div class="margin-bottom30">
                                     <p class="margin0 font13 text-right pointer color-lightblue">Fogot Password?</p>

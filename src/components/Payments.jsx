@@ -14,7 +14,7 @@ class Payments extends Component {
                         <article className="flex padding20">
                             <section className="padding0-20">
                                 <div>
-                                    <h4>Credit Card</h4>
+                                    <h4 className="my-title">Credit Card</h4>
                                 </div>
                                 <div className="square30"></div>
                                 <article className="width100">
@@ -46,7 +46,7 @@ class Payments extends Component {
 
                             <section className="margin0-20 padding0-20">
                                 <div>
-                                    <h4>Cash</h4>
+                                    <h4 className="my-title">Cash</h4>
                                 </div>
                                 <div className="square30"></div>
                                 <article className="width100">
@@ -78,7 +78,7 @@ class Payments extends Component {
 
                             <section className="padding0-20">
                                 <div>
-                                    <h4>Other options</h4>
+                                    <h4 className="my-title">Other options</h4>
                                 </div>
                                 <div className="square30"></div>
                                 <article className="width100">

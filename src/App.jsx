@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Login className="app-box"/>
+        <Login className="app-box"></Login>
       </div>
     );
   }

@@ -5,7 +5,9 @@
   "dependencies": {
     "is-js": "^0.1.1",
     "react": "^16.1.1",
+    "react-apollo": "^2.0.4",
     "react-dom": "^16.1.1",
+    "react-modal": "^3.1.7",
     "react-router": "^3.2.0",
     "react-scripts": "1.0.17"
   },

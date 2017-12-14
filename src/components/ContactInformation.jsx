@@ -10,14 +10,14 @@ class Contactformation extends Component {
                 
                 <article className="margin20 padding20-30 flex flex-center">
                     <div className="width100 margin-right20 padding0-20">
-                        <h4>Phone</h4>
+                        <h4 className="my-title">Phone</h4>
                         <div>
                             <input type="text" className="my-input" value="+52 559345533"/>
                         </div>
                     </div>
 
                     <div className="width100 padding0-20">
-                        <h4>Email</h4>
+                        <h4 className="my-title">Email</h4>
                         <div>
                             <input type="text" className="my-input" value="info@restaurant.com"/>
                         </div>
@@ -26,14 +26,14 @@ class Contactformation extends Component {
 
                 <article className="margin0-20 padding20-30 flex flex-center">
                     <div className="width100 margin-right20 padding0-20">
-                        <h4>Website</h4>
+                        <h4 className="my-title">Website</h4>
                         <div>
                             <input type="text" className="my-input" value="wwww.restaurantmex.com"/>
                         </div>
                     </div>
 
                     <div className="width100 padding0-20">
-                        <h4>Facebook</h4>
+                        <h4 className="my-title">Facebook</h4>
                         <div>
                             <input type="text" className="my-input" value="www.facebook.com/3436346"/>
                         </div>

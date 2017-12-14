@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { browserHistory } from 'react-router'
+import is from 'is-js'
 import Menu from './Menu'
 import BasicInformation from './BasicInformation'
 import ContactInformation from './ContactInformation'
@@ -7,6 +8,9 @@ import OperationInformation from './OperationInformation'
 import Payments from './Payments'
 import Completed from './Completed'
 import SpecialServices from './SpecialServices'
+import SpecialReq from './SpecialReq'
+
+import ErrorTag from './ErrorTag'
 
 
 
@@ -17,10 +21,51 @@ class Settings extends Component {
         this.state = {
             showUserInfo: false,
             showCompanyInfo: false,
-            step: 1
+            step: 1,
+            name:'',
+            lastName:'',
+            phone:'',
+            email:'',
+            password:'',
+            repeatPassword:'',
+            noValidLastName:  false,
+            noValidName: false,
+            noValidEmail: false,
+            
         }
         // this.setStep = this.setStep.bind(this)
     }
+    checkName(){
+        if(is.empty(this.state.name)){
+            this.setState({ noValidName : true})
+        } else {
+            this.setState({ noValidName : false})
+        }
+    }
+
+    checkLastName(){
+        if(is.empty(this.state.lastName)){
+            this.setState({ noValidLastName : true})
+        } else {
+            this.setState({ noValidLastName : false})
+        }
+    }
+
+    checkEmail(){
+        if(is.empty(this.state.email)){
+            this.setState({ noValidEmail : true })
+        } else {
+            this.setState({ noValidEmail : false})
+        }
+    }
+    validateFields(){
+        console.log(this.state)
+
+
+
+        this.saveChanges()
+    }
+
     setStep(number){
         console.log(number)
         this.setState({step: number})
@@ -42,6 +87,9 @@ class Settings extends Component {
             return false
         }
         this.setState({step:  this.state.step + 1})
+    }
+
+    saveChanges(){
     }
 
     render(){
@@ -88,61 +136,77 @@ class Settings extends Component {
                         </article>
 
                         <article className="margin0-20 padding20-30 flex flex-center">
-                            <div className="width100 margin-right20 padding0-20">
-                                <h4>Name</h4>
+                            <div className="width100 margin-right20 padding0-20 relative">
+                                <h4 className="my-title">Name</h4>
                                 <div>
-                                    <input type="text" className="my-input" value="Juan"/>
+                                    <input type="text" className="my-input" placeholder="Ex. Josh" onChange={e => this.setState({name: e.target.value})} onBlur={()=> this.checkName()}/>
                                 </div>
+                                <span className={`shot absolute ${this.state.noValidName ? 'flex' : 'hide'}`}>
+                                    <ErrorTag msg="Please, check this field."></ErrorTag>
+                                </span>
+                                
+                            </div>
+
+                            <div className="width100 padding0-20 relative">
+                                <h4 className="my-title">Last Name</h4>
+                                <div>
+                                    <input type="text" onChange={e => this.setState({ lastName: e.target.value })} className="my-input" onBlur={()=> this.checkLastName()}/>
+                                </div>
+                                <span className={`shot absolute ${this.state.noValidLastName ? 'flex' : 'hide'}`}>
+                                    <ErrorTag msg="Please, check this field."></ErrorTag>
+                                </span>
+                            </div>
+                        </article>
+
+                        <article className="margin0-20 padding20-30 flex flex-center ">
+                            <div className="width100 margin-right20 padding0-20 relative">
+                                <h4 className="my-title">Email</h4>
+                                <div>
+                                    <input type="text" onChange={e => this.setState({ email: e.target.value })} className="my-input" onBlur={()=> this.checkEmail()}/>
+                                </div>
+                                <span className={`shot absolute ${this.state.noValidEmail ? 'flex' : 'hide'}`}>
+                                    <ErrorTag msg="Please, check this field."></ErrorTag>
+                                </span>
                             </div>
 
                             <div className="width100 padding0-20">
-                                <h4>Last Name</h4>
+                                <h4 className="my-title">Phone</h4>
                                 <div>
-                                    <input type="text" className="my-input" value="Gomez"/>
+                                    <input type="text" className="my-input" onChange={e => this.setState({phone: e.target.value })}/>
                                 </div>
                             </div>
                         </article>
 
-                        <article className="margin0-20 padding20-30 flex flex-center">
-                            <div className="width100 margin-right20 padding0-20">
-                                <h4>Email</h4>
+                        <article className="margin0-20 padding20-30 flex flex-center " >
+                            <div className="width100 margin-right20 padding0-20 relative">
+                                <h4 className="my-title">Password</h4>
                                 <div>
-                                    <input type="text" className="my-input" value="juangomez@gmail.com"/>
+                                    <input type="password" className="my-input" onChange={e => this.setState({password: e.target.value })}/>
                                 </div>
+                                <span className={`shot absolute ${this.state.noValidPassword ? 'flex' : 'hide'}`}>
+                                    <ErrorTag msg="Please, check this field."></ErrorTag>
+                                </span>
                             </div>
 
-                            <div className="width100 padding0-20">
-                                <h4>Phone</h4>
+                            <div className="width100 padding0-20 relative">
+                                <h4 className="my-title">Confirm Password</h4>
                                 <div>
-                                    <input type="text" className="my-input" value="+5523872399"/>
+                                    <input type="password" className="my-input" onChange={e => this.setState({repeatPassword: e.target.value })}/>
                                 </div>
-                            </div>
-                        </article>
-
-                        <article className="margin0-20 padding20-30 flex flex-center">
-                            <div className="width100 margin-right20 padding0-20">
-                                <h4>Password</h4>
-                                <div>
-                                    <input type="password" className="my-input" value="jsfdfre"/>
-                                </div>
-                            </div>
-
-                            <div className="width100 padding0-20">
-                                <h4>Confirm Password</h4>
-                                <div>
-                                    <input type="password" className="my-input" value="jsfdfre"/>
-                                </div>
+                                <span className={`shot absolute ${this.state.noValidRepeatPassword ? 'flex' : 'hide'}`}>
+                                    <ErrorTag msg="Please, check this field."></ErrorTag>
+                                </span>
                             </div>
                         </article>
 
                         <article className="margin0-20 flex flex-center" style={{paddingLeft: 30 + 'px'}}>
-                            <div className="width100 margin-right20 padding0-20">
-                                <h4>Profile Photo</h4>
+                            <div className="width100 margin-right20 padding10-20">
+                                <h4 className="my-title">Profile Photo</h4>
                             </div>
                         </article>
 
                         <article className="margin0-20 flex flex-center" style={{paddingLeft: 40 + 'px', paddingRight: 40 + 'px'}}>
-                            <div className="width100 margin-right20 padding10-20">
+                            <div className="width100 margin-right20 padding0-10">
                                 <figure className="margin0 rounded border2 color-fuchia square70 back-gray relative">
                                     {/* <img src="https://scontent.fgdl1-2.fna.fbcdn.net/v/t1.0-9/19224935_10207926979927346_4253521002093344347_n.jpg?oh=30cec9bcfc8d89bf2c4a11734cd0a26a&oe=5A6C6420" className="width100 rounded height100" /> */}
                                     <span className="fa fa-user absolute font30 color-black" style={{top: 20 + 'px', left: 25 + 'px'}}></span>
@@ -230,6 +294,7 @@ class Settings extends Component {
                             {
                                         
                                 this.state.step == 1 ? <BasicInformation></BasicInformation> : this.state.step == 2 ? <ContactInformation></ContactInformation> : this.state.step == 3 ? <OperationInformation></OperationInformation> : this.state.step == 4 ? <Payments></Payments> : 
+                                this.state.step == 5 ? <SpecialReq></SpecialReq> : 
                                 this.state.step == 6 ? <SpecialServices></SpecialServices> :  this.state.step == 7 ? <Completed></Completed> :''
                             }
                         </div>
@@ -241,7 +306,9 @@ class Settings extends Component {
                         <p className="margin-right20 font20 pointer" onClick={()=> {
                             this.next()
                          }}>Skip</p>
-                        <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}}>Save</button>
+                        <button className="my-btn back-fuchia color-white" style={{width:180  + 'px !important', paddingRight: 30 + 'px', paddingLeft: 30 + 'px', paddingTop: 15 + 'px',paddingBottom: 15 + 'px'}} onClick={()=> {
+                            this.validateFields()
+                         }}>Save</button>
                     </div>
                 </section>
                

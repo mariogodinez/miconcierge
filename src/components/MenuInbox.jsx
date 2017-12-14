@@ -5,7 +5,8 @@ class MenuInbox extends Component {
     constructor(props){
         super(props)
         this.state = {
-            messages: [1,2,3,4,5]
+            messages: [1,2,3,4,5],
+            active: false
         }
     }
 
@@ -19,9 +20,11 @@ class MenuInbox extends Component {
                             <img src="./img/miconcierge.png" className="width100" alt="logo miconcierge" />
                         </figure>
                         <div className="my-nav-inbox-switch flex flex-middle">
-                            <span className="color-fuchia" style={{marginRight: 3 + 'px'}}>On</span>
-                            <span className="fa fa-toggle-on color-fuchia font25"></span>
-                            <span style={{marginLeft: 3 + 'px'}}>Off</span>
+                            <span className={`${ this.state.active ? 'color-fuchia' : ''}`}  style={{marginRight: 3 + 'px'}}>On</span>
+                            <span className={`fa pointer color-fuchia fa-toggle-on font25  ${ !this.state.active ? 'hide' : 'flex'}`} onClick={() =>{ this.setState({ active: !this.state.active }) }}></span>
+
+                            <span className={`fa pointer fa-toggle-off font25  ${ this.state.active ? 'hide' : 'flex'}`} onClick={() =>{ this.setState({ active: !this.state.active }) }}></span>    
+                            <span className={`${ !this.state.active ? 'color-black' : ''}`} style={{marginLeft: 3 + 'px'}}>Off</span>
                         </div>
                     </article>
 

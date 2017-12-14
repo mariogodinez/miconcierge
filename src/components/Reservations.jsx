@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { browserHistory } from 'react-router'
 import Menu from './Menu'
+import ModalAddReservation from './ModalAddReservation'
+
 
 
 class Reservations extends Component {
@@ -8,6 +10,7 @@ class Reservations extends Component {
         super(props)
 
         this.state = {
+            showAddReservation: false,
             clients: [1,2,3,4,5],
             tabs: [{
                 name: 'All',
@@ -29,6 +32,11 @@ class Reservations extends Component {
 
     goReservation(){
         browserHistory.push('/reservation-view')
+    }
+
+    handleShowAddReservation(){
+        alert('yea')
+        
     }
 
     render () {
@@ -59,7 +67,7 @@ class Reservations extends Component {
                         </section>
                     </article>
 
-                    <article className="flex width100 panel-header">
+                    <article className="flex padding0-20 width100 panel-header">
                         
                         <div className="padding10 flex panel-header-first">
                             <h3 className="color-gray">
@@ -94,9 +102,9 @@ class Reservations extends Component {
                                 <section className="reservations " onClick={()=>{
                                         this.goReservation()
                                     }}>
-                                        <article className="flex width100 padding0 pointer reservations-list panel-header">
+                                        <article className="flex width100 padding0-10 pointer reservations-list panel-header">
                                             
-                                            <div className="padding0-10 panel-header-first" >
+                                            <div className="padding0-20 panel-header-first" >
                                                 <h3 className="color-black font-normal font25 margin-bottom5">
                                                 Felipe Carrillo
                                                 </h3>
@@ -135,6 +143,13 @@ class Reservations extends Component {
 
                     
                 </section>
+                <div onClick={()=>{ this.setState({ showAddReservation : true }) }} className="back-lightblue  rounded absolute flex flex-middle flex-center square60 shadowCard pointer" style={{bottom: 12 + 'px', right: 12 + 'px'}}>
+                    <span className="ion-plus-round font25 color-white"></span>
+                </div>
+                {
+                    this.state.showAddReservation ? <ModalAddReservation></ModalAddReservation> : ''
+                }
+                
             </div>
         )
     }

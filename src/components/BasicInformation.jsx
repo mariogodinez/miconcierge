@@ -10,14 +10,14 @@ class BasicInformation extends Component {
                     <br/>
                 <article className="margin20 padding20-30 flex flex-center">
                     <div className="width100 margin-right20 padding0-20">
-                        <h4>Company Name</h4>
+                        <h4 className="my-title">Company Name</h4>
                         <div>
                             <input type="text" className="my-input" value="Restaurant la Recova"/>
                         </div>
                     </div>
 
                     <div className="width100 padding0-20">
-                        <h4>Business Description</h4>
+                        <h4 className="my-title">Business Description</h4>
                         <div>
                             <input type="text" className="my-input" value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam tenetur est itaque velit fu"/>
                         </div>
@@ -26,14 +26,14 @@ class BasicInformation extends Component {
 
                 <article className="margin0-20 padding20-30 flex flex-center">
                     <div className="width100 margin-right20 padding0-20">
-                        <h4>City Name</h4>
+                        <h4 className="my-title">City Name</h4>
                         <div>
                             <input type="text" className="my-input" value="Restaurant la Recova"/>
                         </div>
                     </div>
 
                     <div className="width100 padding0-20">
-                        <h4>Address</h4>
+                        <h4 className="my-title">Address</h4>
                         <div>
                             <input type="text" className="my-input" value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam tenetur est itaque velit fu"/>
                         </div>
@@ -42,14 +42,14 @@ class BasicInformation extends Component {
 
                 <article className="margin0-20 padding20-30 flex flex-center" style={{paddingBottom: 5 + 'px'}}>
                     <div className="width100 margin-right20 padding0-20">
-                        <h4>Postal Code</h4>
+                        <h4 className="my-title">Postal Code</h4>
                         <div>
                             <input type="text" className="my-input" value="Restaurant la Recova"/>
                         </div>
                     </div>
 
                     <div className="width100 padding0-20">
-                        <h4>Coordinate Address</h4>
+                        <h4 className="my-title">Coordinate Address</h4>
                         <div>
                             <input type="text" className="my-input" value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam tenetur est itaque velit fu"/>
                         </div>
