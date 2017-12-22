@@ -54,8 +54,8 @@ class ReservationView extends Component {
 				</div>
 			</article>
 
-			<section class="padding-bottom20 heightSectionScroll" >
-				<article class="flex flex-between width100 padding0 margin-bottom30">
+			<section class="padding-bottom20" >
+				<article class="flex flex-between width100 padding0 margin-bottom20">
 					<div class="flex margin-left10">
                         <div class="padding0-10 flex flex-center">
                             <figure class="margin0 rounded border2 color-fuchia square70">
@@ -70,13 +70,12 @@ class ReservationView extends Component {
                         </div>
 					</div>
 
-					<div class="padding0 text-center flex flex-center flex-middle margin-right20">
+					<div class="padding0 text-center flex flex-column flex-center flex-middle margin-right20">
 						<button class="round10 my-btn flex flex-middle back-lightblue color-white">
 							<span class="margin-right10 ion-ios-checkmark-outline font30"></span>
 							<span class="">Check in</span>
 						</button>
-						{/* <span class="ion-ios-close-outline font30" ></span>
-						<span class="ion-ios-clock-outline font30"></span> */}
+						<p className="anchor color-gray margin-top10">On Hold</p>
 					</div>
 				</article>
 
@@ -120,8 +119,10 @@ class ReservationView extends Component {
 						<h3 className="font30 color-fuchia font-normal">4</h3>
 					</div>
 
-					<div className="" style={{width: 15 + '%'}}>
-						<h3>Status</h3>
+					<div className="flex flex-middle relative" style={{width: 15 + '%'}}>
+						<span className="ion-ios-checkmark-outline color-green font25"></span>
+						<span className="color-green font20">Approve</span>
+						<p className="color-gray absolute anchor"  style={{bottom: -20 + 'px', left: 0}}>Cancel</p>
 					</div>
 
 				</article>
@@ -130,16 +131,19 @@ class ReservationView extends Component {
 							<div className="margin0 padding0" style={{width: 130 + 'px'}}>
 
 							</div>
+							
 							<div className="" style={{width: 30 + '%'}}>
+								<h3>Check In Time</h3>
+							</div>
+							<div className="" style={{width: 25 + '%'}}>
 								<h3>Total Consumption</h3>
 							</div>
 
-							<div className="" style={{width: 40 + '%'}}>
+							<div className="" style={{width: 30 + '%'}}>
 								<h3>Hotel: (Comes From...)</h3>
 							</div>
 
-							<div className="" style={{width: 15 + '%'}}>
-							</div>
+							
 
 							<div className="" style={{width: 15 + '%'}}>
 							</div>
@@ -149,16 +153,20 @@ class ReservationView extends Component {
 							<div className="margin0 padding0-20" style={{width: 90 + 'px'}}>
 
 							</div>
+							
 							<div className="" style={{width: 30 + '%'}}>
-								<h3 className="font30 color-fuchia font-normal">$600</h3>
+								<h3 className="font30 color-black font-normal">20:36 hrs.</h3>
+							
+							</div>
+							<div className="" style={{width: 25 + '%'}}>
+								<h3 className="font30 color-black font-normal">-</h3>
 							</div>
 
-							<div className="" style={{width: 40 + '%'}}>
+							<div className="" style={{width: 30 + '%'}}>
 								<h3 className="font30 color-black font-normal">Iberostar</h3>
 							</div>
 
-							<div className="" style={{width: 15 + '%'}}>
-							</div>
+							
 
 							<div className="" style={{width: 15 + '%'}}>
 							</div>
@@ -168,7 +176,7 @@ class ReservationView extends Component {
 
 					<div className="border1 color-lightgray margin20" style={{width: 95 + '%'}}></div>
 
-					<article class="flex width100">
+					<article class="flex width100 margin-bottom10">
 				
 						<div class="padding0-10 flex flex-right" style={{width: 90 + 'px'}}>
 							<figure class="margin0 rounded border2 color-fuchia square40">
@@ -181,7 +189,7 @@ class ReservationView extends Component {
 								Promoter:
 							</h3>
 
-							<h3 class="color-black font30 font-normal">
+							<h3 class="color-black font25 font-normal">
 								Arturo López
 							</h3>
 						</div>
@@ -191,17 +199,48 @@ class ReservationView extends Component {
 								Phone:
 							</h3>
 
-							<h3 class="color-black font30 font-normal">
+							<h3 class="color-black font25 font-normal">
 								+55 999 321 23 32
 							</h3>
 						</div>
 
 						<div class="padding0-10 text-center flex flex-center flex-middle">
-							<button style={{width: 100 + 'px'}} class="my-btn flex flex-middle flex-between back-white color-lightblue border2 round10">
-								<span class="">Chat</span>
-								<span class="ion-chatbox-working font30"></span>
-								
+							<button  style={{width: 130 + 'px', 'padding-top': 3 + 'px', 'padding-bottom': 3 + 'px'}} className="my-btn flex flex-center flex-middle flex-between back-white color-lightblue border2 round10">
+								<span className="margin-right10">Chat</span>
+								<span className="ion-chatbox-working font30"></span>
 							</button>
+						</div>
+					</article>
+
+					<article class="flex width100">
+				
+						<div class="padding0-10 flex flex-right" style={{width: 90 + 'px'}}>
+							<figure class="margin0 opacity0 rounded border2 color-fuchia square40">
+                            </figure>
+						</div>
+
+						<div class="padding0-10" style={{width: 25 + '%'}}>
+							<h3 class="color-gray">
+								Comission
+							</h3>
+
+							<h3 class="color-fuchia font25 font-normal">
+								$60
+							</h3>
+						</div>
+
+						<div class="padding0" style={{width: 40 + '%'}}>
+							<h3 class="color-gray">
+								Company
+							</h3>
+
+							<h3 class="color-black font25 font-normal">
+								Travel Guide Agency
+							</h3>
+						</div>
+
+						<div class="padding0-10 text-center flex flex-center flex-middle">
+							
 						</div>
 					</article>
 				

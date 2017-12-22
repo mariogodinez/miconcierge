@@ -2,13 +2,19 @@ import React, { Component } from 'react'
 import { browserHistory } from 'react-router'
 import Menu from './Menu'
 import ModalAddReservation from './ModalAddReservation'
+import gql from 'graphql-tag'
+import { graphql } from 'react-apollo'
 
 
+const query = gql`{
+    users {
+        id
+    }
+}`
 
 class Reservations extends Component {
     constructor(props){
         super(props)
-
         this.state = {
             showAddReservation: false,
             clients: [1,2,3,4,5],
@@ -25,6 +31,10 @@ class Reservations extends Component {
                 name: 'Canceled',
                 items: 0
             }
+            ,{
+                name: 'CheckOut',
+                items: 4
+            }
             ],
             tabActive: 'All',
         }
@@ -40,6 +50,13 @@ class Reservations extends Component {
     }
 
     render () {
+
+        let {data}  = this.props
+
+    
+        console.log('data>',data)
+        console.log('dataProps>',this.props.data)
+        
         return (
             <div className="flex height85vh">
                 <Menu></Menu>
@@ -48,7 +65,7 @@ class Reservations extends Component {
                         <h2 className="color-fuchia text-center">Reservations List</h2>
                     </article>
 
-                    <article className="flex flex-middle flex-right">
+                    <article className="flex flex-middle flex-right margin-left20">
                         <section className="tabs flex">
                             { this.state.tabs.map(tab => {
                                 return (<div className="tabs-item pointer flex">
@@ -58,7 +75,7 @@ class Reservations extends Component {
                             }) }
                             
                         </section>
-                        <section className="margin-left20 margin-right20">
+                        <section className=" margin-right20">
                             <div className="my-input-search margin10 flex flex-middle relative">
                                 <span className="ion-levels my-input-search-icon-lupe relative"></span>
                                 <input type="" name="" placeholder="Search ..." className="flex" />
@@ -154,5 +171,7 @@ class Reservations extends Component {
         )
     }
 }
+
+Reservations = graphql(query)(Reservations)
 
 export default Reservations

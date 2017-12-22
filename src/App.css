@@ -278,6 +278,9 @@ h6 {
 .color-white {
   color: #fff;
 }
+.color-green {
+  color: #79d16a;
+}
 .color-black {
   color: #000;
 }
@@ -867,7 +870,7 @@ body {
 }
 .tabs .tabs-item {
   padding: 0.4em 0.8em;
-  margin: 0.3em 0.6em;
+  margin: 0.3em 0;
   border-radius: 4px;
   background: trasparent;
   transition: 0.4s;

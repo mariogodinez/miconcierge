@@ -97,7 +97,7 @@ class OperationInformation extends Component {
 
                               <span className="flex margin-right20">
                                 <div className="checkWrap flex flex-middle flex-center margin0 relative" style={{bottom: 2 + 'px', 'flex-shrink': 0}}>
-                                    <input type="radio" name="yesNo" id="privacityCheck" className=" pointer" />
+                                    <input type="radio" name="to" id="privacityCheck" className=" pointer" />
                                     <label className="check-icon back-fuchia"></label>
                                 </div>
                                 <h4 className="color-gray margin-left5">AM</h4>  
@@ -105,7 +105,7 @@ class OperationInformation extends Component {
 
                               <span className="flex">
                                 <div className="checkWrap flex flex-middle flex-center margin0 relative" style={{bottom: 2 + 'px', 'flex-shrink': 0}}>
-                                    <input type="radio" name="yesNo" id="privacityCheck" className=" pointer" />
+                                    <input type="radio" name="to" id="privacityCheck" className=" pointer" />
                                     <label className="check-icon back-fuchia"></label>
                                 </div>
                                 <h4 className="color-gray margin-left5">PM</h4>  

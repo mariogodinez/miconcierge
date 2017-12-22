@@ -16,7 +16,7 @@ class Login extends Component {
     login(){
         if(is.empty(this.state.email)  || is.empty(this.state.password)){
 
-            alert('Email es requerido y contrasena son requeridos')
+            alert('Email y contrasena son requeridos')
             return false
         }
         
