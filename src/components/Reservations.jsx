@@ -6,11 +6,14 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
 
-const query = gql`{
-    users {
-        id
-    }
-}`
+
+const query = gql`
+query users {
+    id
+}
+`
+
+console.log('userssss',query)
 
 class Reservations extends Component {
     constructor(props){
@@ -50,12 +53,6 @@ class Reservations extends Component {
     }
 
     render () {
-
-        let {data}  = this.props
-
-    
-        console.log('data>',data)
-        console.log('dataProps>',this.props.data)
         
         return (
             <div className="flex height85vh">
